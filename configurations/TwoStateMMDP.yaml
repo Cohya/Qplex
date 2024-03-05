@@ -1,0 +1,26 @@
+# --- All configs ---
+
+# --- RNN config ---
+rnn_embedded_dims: 64 # Emmbeded dims of the Q(tau,a)
+rnn_hidden_dims: 64 # Hidden layer for the RNN network agent 
+rnn_input_dims: (1,1,1) # The input dims in to the Agent Rnn network include the batch size
+obs_agent_id: True # Include the agent's one_hot id in the observation
+obs_last_action: True # Include the agent's last action (one_hot) in the observation
+
+
+# --- Environment config ---
+action_dims: 2 # action dims 
+number_of_agents: 2 # Number of agents in the game 
+state_dims: 2 # This is observation of all 3 agents concatanated + more info ! 
+
+## Transformation Block 
+hypernet_embed: 64
+
+## Lambda computing 
+number_of_heads: 4
+adv_hypernet_layers: 3
+adv_hypernet_embed: 64
+
+#Reinforcement variables 
+gamma: 0.99 # discount factor 
+learning_rate: 0.0005 # optimizer learning rate 
